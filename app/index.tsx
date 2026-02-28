@@ -1,3 +1,4 @@
+import { Stack } from "expo-router";
 import { useState } from "react";
 import {
   FlatList,
@@ -45,6 +46,8 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+      <Stack.Screen options={{ headerShown: false }} />
+
       <Text style={styles.title}>Minhas Tarefas</Text>
 
       <TextInput
@@ -52,7 +55,6 @@ export default function Index() {
         onChangeText={setInputValue}
         placeholder="Digite uma nova tarefa..."
         style={styles.input}
-        // 👇 A MÁGICA ACONTECE AQUI 👇
         onSubmitEditing={addTask} 
         returnKeyType="send" 
       />
