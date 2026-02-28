@@ -39,7 +39,7 @@ export default function Index() {
       createdAt: getFormattedDate(),
     };
 
-    setTaskList([...taskList, newTask]);
+    setTaskList([newTask, ...taskList]);
     setInputValue(""); 
   }
 
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   },
   taskDate: {
     fontSize: 12,
-    color: "#666",
+    color: "rgb(102, 102, 102)",
     marginTop: 5,
   },
 });
