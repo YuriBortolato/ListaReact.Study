@@ -52,6 +52,9 @@ export default function Index() {
         onChangeText={setInputValue}
         placeholder="Digite uma nova tarefa..."
         style={styles.input}
+        // 👇 A MÁGICA ACONTECE AQUI 👇
+        onSubmitEditing={addTask} 
+        returnKeyType="send" 
       />
 
       <TouchableOpacity onPress={addTask} style={styles.button}>
@@ -127,7 +130,7 @@ const styles = StyleSheet.create({
   },
   taskDate: {
     fontSize: 12,
-    color: "rgb(102, 102, 102)",
+    color: "#666",
     marginTop: 5,
   },
 });
